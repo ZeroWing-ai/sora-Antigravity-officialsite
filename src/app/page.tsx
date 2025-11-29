@@ -7,13 +7,15 @@ import SkyBackground from '../components/SkyBackground';
 
 export default function Home() {
     return (
-        <main className="bg-black min-h-screen relative">
+        <main className="bg-transparent min-h-screen relative">
             <SkyBackground />
-            <Header />
-            <Hero />
-            <Profile />
-            <Works />
-            <Footer />
+            <div className="relative z-10">
+                <Header />
+                <Hero />
+                <Profile />
+                <Works />
+                <Footer />
+            </div>
         </main>
     );
 }
