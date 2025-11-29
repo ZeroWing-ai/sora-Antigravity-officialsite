@@ -34,3 +34,30 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #9333ea;
 }
+
+/* Sky Background Animations */
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+.animate-twinkle {
+    animation: twinkle ease-in-out infinite;
+}
+
+.animate-float {
+    animation: float linear infinite;
+}
