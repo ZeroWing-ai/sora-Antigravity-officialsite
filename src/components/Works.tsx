@@ -83,7 +83,7 @@ function CategoryCarousel({ category }: { category: string }) {
                             <img
                                 src={currentWork.image}
                                 alt={currentWork.title}
-                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                className={`w-full h-full ${currentWork.title === 'note' ? 'object-contain bg-black/50' : 'object-cover'} group-hover:scale-105 transition-transform duration-700`}
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-zinc-900/90" />
                         </div>
