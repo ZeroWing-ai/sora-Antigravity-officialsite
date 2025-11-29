@@ -41,11 +41,11 @@ function CategoryCarousel({ category }: { category: string }) {
     const categoryWorks = works.filter((w) => w.category === category);
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // 自動再生 (4秒ごと)
+    // 自動再生 (5秒ごと)
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % categoryWorks.length);
-        }, 4000);
+        }, 5000);
         return () => clearInterval(timer);
     }, [categoryWorks.length]);
 
