@@ -9,7 +9,7 @@ export default function Home() {
     return (
         <main className="bg-transparent min-h-screen relative">
             <WaveBackground />
-            <div className="relative z-10">
+            <div className="relative z-20">
                 <Header />
                 <Hero />
                 <Profile />
