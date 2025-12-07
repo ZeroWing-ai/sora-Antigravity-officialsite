@@ -6,8 +6,8 @@
 }
 
 :root {
-    --background: #000000;
-    --foreground: #ffffff;
+    --background: #ffffff;
+    --foreground: #0f172a; /* slate-900 */
 }
 
 body {

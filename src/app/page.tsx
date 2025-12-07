@@ -2,6 +2,7 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Profile from '../components/Profile';
 import Works from '../components/Works';
+import SNS from '../components/SNS';
 import Footer from '../components/Footer';
 import WaveBackground from '../components/WaveBackground';
 
@@ -14,10 +15,9 @@ export default function Home() {
                 <Hero />
                 <Profile />
                 <Works />
+                <SNS />
                 <Footer />
             </div>
         </main>
     );
 }
-
-

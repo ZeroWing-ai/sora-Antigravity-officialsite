@@ -38,7 +38,6 @@ export const works = [
         image: '/images/pomodoro-timer.png',
     },
 
-    // Creative / Others Category
     {
         title: 'LINEスタンプ',
         description: '【日常を彩るオリジナルキャラクター】 親しみやすいタッチで描かれたオリジナルキャラクターたちが、あなたのLINEでの会話をより豊かにします。日常使いしやすいデザインで、感情をユーモラスに伝えます。',
@@ -46,12 +45,15 @@ export const works = [
         link: 'https://store.line.me/stickershop/author/5261408/ja',
         image: '/images/line-stickers.png',
     },
+];
+
+export const sns = [
     {
         title: 'note',
         description: '【Webクリエイターの視点：考察とデザイン論】 デザイン、開発技術、そして日々のクリエイティブな気づきを発信しているデジタルノートです。制作の裏側や、学びのプロセスを深掘りした記事を公開しています。',
-        category: 'クリエイティブ',
+        category: 'SNS',
         link: 'https://note.com/zerowng/portal',
-        image: '/images/note.png',
+        image: '/images/note-page.png',
     },
 ];
 

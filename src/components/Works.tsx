@@ -10,7 +10,7 @@ const categories = Array.from(new Set(works.map((w) => w.category)));
 
 export default function Works() {
     return (
-        <section id="works" className="py-24 bg-black overflow-hidden">
+        <section id="works" className="py-24 bg-white overflow-hidden">
             <div className="container mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -19,10 +19,10 @@ export default function Works() {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">
                         作品
                     </h2>
-                    <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+                    <p className="text-slate-600 text-lg max-w-2xl mx-auto">
                         これまでに制作した作品の一部をご紹介します。
                     </p>
                 </motion.div>
@@ -61,11 +61,11 @@ function CategoryCarousel({ category }: { category: string }) {
 
     return (
         <div className="relative">
-            <h3 className="text-2xl font-bold text-purple-400 mb-6 border-l-4 border-purple-500 pl-4">
+            <h3 className="text-2xl font-bold text-blue-600 mb-6 border-l-4 border-blue-500 pl-4">
                 {category}
             </h3>
 
-            <div className="relative bg-zinc-900/50 rounded-3xl overflow-hidden border border-zinc-800 aspect-[16/9] md:aspect-[21/9]">
+            <div className="relative bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-xl shadow-slate-200/50 aspect-[16/9] md:aspect-[21/9]">
                 <AnimatePresence mode="wait">
                     <motion.a
                         key={currentIndex}
@@ -79,36 +79,36 @@ function CategoryCarousel({ category }: { category: string }) {
                         className="absolute inset-0 flex flex-col md:flex-row group cursor-pointer"
                     >
                         {/* Image Section */}
-                        <div className="w-full md:w-1/2 h-full relative overflow-hidden">
+                        <div className="w-full md:w-1/2 h-full relative overflow-hidden bg-slate-100">
                             <img
                                 src={currentWork.image}
                                 alt={currentWork.title}
-                                className={`w-full h-full ${currentWork.title === 'note' ? 'object-contain bg-black/50' : 'object-cover'} group-hover:scale-105 transition-transform duration-700`}
+                                className={`w-full h-full ${currentWork.title === 'note' ? 'object-contain p-8' : 'object-cover'} group-hover:scale-105 transition-transform duration-700`}
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-zinc-900/90" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-white/90" />
                         </div>
 
                         {/* Content Section */}
-                        <div className="w-full md:w-1/2 h-full p-8 md:p-12 flex flex-col justify-center bg-zinc-900/90 md:bg-transparent z-10">
+                        <div className="w-full md:w-1/2 h-full p-8 md:p-12 flex flex-col justify-center bg-white/95 md:bg-transparent z-10">
                             <div className="mb-4">
-                                <span className="inline-block px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-semibold mb-2">
+                                <span className="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-600 text-xs font-semibold mb-2">
                                     {currentWork.category}
                                 </span>
-                                <h4 className="text-2xl md:text-4xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                                <h4 className="text-2xl md:text-4xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
                                     {currentWork.title}
                                 </h4>
-                                <p className="text-gray-500 text-sm font-mono break-all flex items-center gap-2">
+                                <p className="text-slate-500 text-sm font-mono break-all flex items-center gap-2">
                                     <ExternalLink size={14} />
                                     {currentWork.link}
                                 </p>
                             </div>
 
-                            <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-8">
+                            <p className="text-slate-600 text-base md:text-lg leading-relaxed mb-8">
                                 {currentWork.description}
                             </p>
 
                             <div className="mt-auto">
-                                <span className="inline-flex items-center gap-2 text-white font-semibold group-hover:translate-x-2 transition-transform">
+                                <span className="inline-flex items-center gap-2 text-slate-900 font-semibold group-hover:translate-x-2 transition-transform">
                                     サイトを見る <ExternalLink size={18} />
                                 </span>
                             </div>
@@ -122,7 +122,7 @@ function CategoryCarousel({ category }: { category: string }) {
                         e.preventDefault();
                         handlePrev();
                     }}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-purple-600 transition-colors z-20"
+                    className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 text-slate-800 shadow-lg hover:bg-blue-500 hover:text-white transition-all z-20 backdrop-blur-sm"
                 >
                     <ChevronLeft size={24} />
                 </button>
@@ -131,7 +131,7 @@ function CategoryCarousel({ category }: { category: string }) {
                         e.preventDefault();
                         handleNext();
                     }}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-purple-600 transition-colors z-20"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 text-slate-800 shadow-lg hover:bg-blue-500 hover:text-white transition-all z-20 backdrop-blur-sm"
                 >
                     <ChevronRight size={24} />
                 </button>
@@ -145,7 +145,7 @@ function CategoryCarousel({ category }: { category: string }) {
                                 e.preventDefault();
                                 setCurrentIndex(idx);
                             }}
-                            className={`w-2 h-2 rounded-full transition-all ${idx === currentIndex ? 'w-8 bg-purple-500' : 'bg-gray-600'
+                            className={`w-2 h-2 rounded-full transition-all ${idx === currentIndex ? 'w-8 bg-blue-500' : 'bg-slate-300'
                                 }`}
                         />
                     ))}
