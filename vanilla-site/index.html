@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sora - Portfolio</title>
+    <meta name="description" content="AIを活用したデザイン制作やデジタルコンテンツの表現に取り組むクリエイター、そら（Sora）のポートフォリオサイト">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Wave Background -->
+    <div class="wave-background">
+        <div class="gradient-bg"></div>
+        <div class="waves">
+            <div class="wave wave-1"></div>
+            <div class="wave wave-2"></div>
+            <div class="wave wave-3"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <header id="header">
+            <div class="container">
+                <a href="#home" class="logo">Sora</a>
+                <nav class="nav-desktop">
+                    <a href="#home">ホーム</a>
+                    <a href="#profile">プロフィール</a>
+                    <a href="#works">作品</a>
+                    <a href="#sns">SNS</a>
+                    <a href="#contact">お問い合わせ</a>
+                </nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <nav class="nav-mobile" id="mobileMenu">
+                <a href="#home">ホーム</a>
+                <a href="#profile">プロフィール</a>
+                <a href="#works">作品</a>
+                <a href="#sns">SNS</a>
+                <a href="#contact">お問い合わせ</a>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-blob hero-blob-1"></div>
+            <div class="hero-blob hero-blob-2"></div>
+            <div class="container hero-content">
+                <h1 class="hero-title fade-in">Sora</h1>
+                <p class="hero-subtitle fade-in">AIクリエイター / デジタルアーティスト</p>
+                <a href="#works" class="hero-btn fade-in">作品を見る</a>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="profile">
+            <div class="container">
+                <div class="section-content fade-in">
+                    <h2 class="section-title">プロフィール</h2>
+                    <p class="profile-text" id="profileText"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Works Section -->
+        <section id="works" class="works">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">作品</h2>
+                    <p class="section-description">これまでに制作した作品の一部をご紹介します。</p>
+                </div>
+                <div id="worksContainer"></div>
+            </div>
+        </section>
+
+        <!-- SNS Section -->
+        <section id="sns" class="sns">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">SNS</h2>
+                    <p class="section-description">日々の発信や活動の様子はこちらから。</p>
+                </div>
+                <div id="snsContainer"></div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact" class="footer">
+            <div class="container">
+                <p>&copy; 2025 Sora. 全著作権所有</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
