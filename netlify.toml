@@ -1,8 +1,19 @@
 [build]
-  publish = "vanilla-site"
+  base = "vanilla-site"
+  publish = "."
   command = ""
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  
+[plugins.inputs]
+  disable = true
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
